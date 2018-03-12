@@ -355,7 +355,6 @@ static void clippaste(const Arg *);
 static void kscrolldown(const Arg *);
 static void kscrollup(const Arg *);
 static void numlock(const Arg *);
-static void swapcolors(const Arg *);
 static void selpaste(const Arg *);
 static void xzoom(const Arg *);
 static void xzoomabs(const Arg *);
@@ -4363,14 +4362,6 @@ void
 numlock(const Arg *dummy)
 {
 	term.numlock ^= 1;
-}
-
-void
-swapcolors(const Arg *dummy)
-{
-	usealtcolors = !usealtcolors;
-	xloadcols();
-	redraw();
 }
 
 char*
